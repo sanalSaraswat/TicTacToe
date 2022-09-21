@@ -1,0 +1,153 @@
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+    padding: 0;
+    background-color: #1a2a33;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+
+.container {
+    margin: 8% auto;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 31.75em;
+    padding: 0 24px;
+}
+
+.container img {
+    width: 32px;
+    margin: 2px;
+}
+
+.container div {
+    flex: 0 0 100%;
+}
+
+
+.gameMenuMarks {
+    background-color: #1f3641;
+    box-shadow: 0 5px 5px #10212a;
+    margin: 40px 0;
+    padding: 24px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.container h1 {
+    line-height: 1.6rem;
+    font-size: 1.2rem;
+    color: #a8bfc9;
+    letter-spacing: 1px;
+
+}
+
+label {
+    color: #a8bfc9;
+    opacity: .5;
+    font-weight: 500;
+    font-size: .8rem;
+    letter-spacing: .88px;
+
+}
+
+a {
+    width: 100%;
+}
+
+.button {
+    width: 100%;
+    background-color: #f2b137;
+    border: none;
+    height: 67px;
+    position: relative;
+    padding: 0 30px 8px;
+    border-radius: 15px;
+    font-size: 1.2rem;
+    line-height: 25.2px;
+    font-weight: 700;
+    color: #1a2a33;
+    cursor: pointer;
+    box-shadow: inset 0 -8px #cc8b13;
+
+}
+
+
+.button:hover {
+    background-color: #ffc860;
+}
+
+
+.choices {
+    display: flex;
+    background-color: #10212a;
+    padding: 8px;
+    border-radius: 12px;
+    margin: 0 0 12px 0;
+
+}
+
+
+
+.choices div {
+    flex: 0 0 50%;
+    padding: 10px;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+
+}
+.x::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    border-radius: 10px;
+    background-color: #31c3bd;
+    margin: 0 2.5%;
+    left: 0;
+    transition: all .5s;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+}
+
+.choices div .x::after {
+    background-color: yellow;
+}
+/* .x::before, .o::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    border-radius: 10px;
+    background-color: #31c3bd;
+    margin: 0 2.5%;
+    transition: all .5s;
+    width: 0%;
+    height: 100%;
+    z-index: -1;
+}
+
+.x::before {
+    right: 0;
+}
+
+
+.o::before {
+    left: 0;
+}
+.x:hover::before, .o:hover:before {
+    width: 95%;
+} */

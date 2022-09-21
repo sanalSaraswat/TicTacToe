@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  width: 100%;
+  margin: 0;
+  background-color: #1a2a33;
+
+}
+
+.container {
+  margin: 10% 20%;
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Cell */
+
+.cell {
+  width: 9rem;
+  height: 9em;
+  background: black;
+  flex: 0 0 auto;
+  margin: 2% 5%;
+  padding: 1%;
+}
