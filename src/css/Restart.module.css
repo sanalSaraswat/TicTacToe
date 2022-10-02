@@ -1,0 +1,91 @@
+:root {
+  --height: 266px;
+  --opacity: 1;
+}
+
+.modal {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  opacity: var(--opacity);
+  align-items: center;
+  transition: opacity .5s;
+}
+
+.modal_content {
+  width: 100%;
+  transition: all 2s;
+  background-color: #1a2a33;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 266px;
+  /* height: var(--height); */
+}
+
+.modal h3 {
+  color: #a8bfc9;
+  font-weight: 700;
+  display: flex;
+  font-size: 3rem;
+  line-height: 50.4px;
+  margin-bottom: 23px;
+}
+
+.modal_content div {
+  display: flex;
+}
+
+.modal button {
+  border: none;
+  height: 52px;
+  border-radius: 10px;
+  padding: 0 16px 1px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  color: #1a2a33;
+  width: auto;
+}
+
+.cancel {
+  background-color: #f2b137;
+  box-shadow: inset 0 -4px 0 #cc8b13;
+  margin-right: 15px;
+}
+
+.restart {
+  background-color: #31c3bd;
+  box-shadow: inset 0 -4px 0 #1b8986;
+  margin-left: 15px;
+}
+
+/* .modalContainer .footer {
+  flex: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalContainer .footer button {
+  width: 150px;
+  height: 45px;
+  margin: 10px;
+  border: none;
+  background-color: cornflowerblue;
+  color: white;
+  border-radius: 8px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#cancelBtn {
+  background-color: crimson;
+} */

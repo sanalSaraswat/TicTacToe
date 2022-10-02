@@ -1,3 +1,8 @@
+:root {
+    --size: 0;
+
+}
+
 html {
     height: 100%;
 }
@@ -7,7 +12,6 @@ body {
     margin: 0%;
     padding: 0%;
     background-color: #1a2a33;
-    ;
 }
 
 * {
@@ -101,6 +105,21 @@ img {
 
 }
 
+
+
+.cell:hover {
+    --size: 48px;
+}
+
+
+
+.cell img {
+    width: var(--size);
+    height: var(--size);
+    transition: all .5s;
+    object-fit: fill;
+}
+
 .scoreBoard {
     display: flex;
     justify-content: space-between;
@@ -135,5 +154,6 @@ img {
     margin: -9px 0 0;
 
 }
+
 
 

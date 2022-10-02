@@ -6,19 +6,25 @@ import x_grey from "./images/icons/icon-x-grey.svg"
 import o_grey from "./images/icons/icon-o-grey.svg"
 import x_black from "./images/icons/icon-x-black.svg"
 import o_black from "./images/icons/icon-o-black.svg"
-import styles from "./css/GameMenu.module.css"
+import styles from "./css/GameMenu.module.scss"
 import { useState } from "react";
 
 
 
-function GameMenu() {
+function GameMenu(props) {
+
 
     const [iconX, changeX] = useState(x_black)
     const [iconO, changeO] = useState(o_grey)
+    const [displacement, setDisplacement] = useState("0")
+
+    document.documentElement.style.setProperty("--displacement", displacement)
 
     function changeX_ToBlack () {
         changeX(x_black)
         changeO(o_grey)
+        setDisplacement("0")
+        
     }
 
     // function changeX_ToGrey () {
@@ -28,18 +34,23 @@ function GameMenu() {
     function changeO_ToBlack () {
         changeO(o_black)
         changeX(x_grey)
+        setDisplacement("100%")
     }
 
     // function changeO_ToGrey () {
     //     changeO(o_grey)
     // }
 
+    function assignMarks () {
+        iconX === x_black ? props.assignMarks('o', 'x') : props.assignMarks('x', 'o')
+
+    }
+    
+
     return (
 
+
         <div>
-
-
-
 
             <div className={styles.container} >
                 <div>
@@ -66,7 +77,7 @@ function GameMenu() {
 
 
                 <Link to="/game-board">
-                    <button className={styles.button}>NEW GAME (VS CPU)</button>
+                    <button onClick={assignMarks} className={styles.button}>NEW GAME (VS CPU)</button>
                 </Link>
 
             </div>
